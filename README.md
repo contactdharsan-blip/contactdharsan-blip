@@ -8,12 +8,6 @@
          l o c a l - f i r s t   ·   t o o l s   I   u s e
 ```
 
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=3200&pause=900&color=64A1F4&center=true&vCenter=true&width=520&lines=Kotlin+%2F+Swift+%2F+Rust+%2F+Python;It+runs+on+my+machine+before+yours;Shipping+%3E+starring)](https://git.io/typing-svg)
-
-</div>
-
 <!--WHOAMI:START-->
 ```
 dharsan@github
@@ -31,7 +25,7 @@ dharsan@github
 Software engineer building local-first apps and developer tooling. Most of what I write
 runs on my own machine before it runs on anyone else's.
 
-<h3>▚ Avorio</h3>
+### Avorio
 
 The one I keep coming back to. A native flashcard app for macOS, iOS, and Android —
 FSRS-5 spaced repetition with the gamification loop that actually keeps people
@@ -62,7 +56,7 @@ reviewing. Closed source for now.
 - **One core, three front ends** — business logic lives in Rust once; SwiftUI and
   Jetpack Compose are views over the same `AvorioDatabase` facade
 
-<h3>▚ Also building</h3>
+### Also building
 
 ```
   ┌─ backglass ───────────────────────────────────────────────────┐
@@ -82,7 +76,7 @@ reviewing. Closed source for now.
 [agent-bridge](https://github.com/contactdharsan-blip/agent-bridge) ·
 [cogwait](https://github.com/Cognifer-Labs/cogwait)
 
-<h3>▚ What I actually write</h3>
+### What I actually write
 
 <!--LANGS:START-->
 ```
@@ -108,7 +102,7 @@ reviewing. Closed source for now.
 
 </div>
 
-<h3>▚ Stats</h3>
+### Stats
 
 <div align="center">
 
@@ -131,7 +125,7 @@ reviewing. Closed source for now.
 </div>
 
 <details>
-<summary><b>▚ More projects</b></summary>
+<summary><b>More projects</b></summary>
 
 <br />
 
@@ -168,7 +162,7 @@ link you cannot open is worse than no link.
 </details>
 
 <details>
-<summary><b>▚ How this profile is built</b></summary>
+<summary><b>How this profile is built</b></summary>
 
 <br />
 
