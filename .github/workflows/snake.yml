@@ -1,0 +1,35 @@
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # Required: the commit step below needs a checkout to push from.
+      - uses: actions/checkout@v4
+
+      - uses: Platane/snk@v3
+        id: snake
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      # Pushes made with GITHUB_TOKEN do not trigger workflows, so this
+      # cannot retrigger the `push` event above and loop.
+      - name: Commit snake into the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git diff --cached --quiet || git commit -m "chore: regenerate contribution snake"
+          git push
