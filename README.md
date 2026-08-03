@@ -18,9 +18,9 @@
 ```
 dharsan@github
 ──────────────────────────────────────────────────
-  repos ........ 19 authored
-  commits ...... 3,401
-  lines ........ 693,665
+  repos ........ 20 authored
+  commits ...... 3,404
+  lines ........ 694,302
   focus ........ local-first, offline-capable
   editor ....... nvim, Xcode when forced
   building ..... Avorio · backglass · agent-bridge
@@ -53,16 +53,16 @@ runs on my own machine before it runs on anyone else's.
   Kotlin       ████████████████████████████████████████  132,519
   TypeScript   █████████████████████████████████████░░░  123,913
   Swift        █████████████████████████████████░░░░░░░  108,802
-  Python       ████████████████████████████░░░░░░░░░░░░   93,718
+  Python       ████████████████████████████░░░░░░░░░░░░   94,201
   JavaScript   ████████████████████████████░░░░░░░░░░░░   93,629
   Rust         ███████████████████████░░░░░░░░░░░░░░░░░   76,086
   SQL          ██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   19,663
   HTML         ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   13,674
   CSS          ████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   12,995
   C/C++        ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    9,399
-  Shell        ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    8,630
+  Shell        ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░    8,784
 
-  693,665 lines of source across 19 repos, vendored code excluded
+  694,302 lines of source across 20 repos, vendored code excluded
 ```
 <!--LANGS:END-->
 
@@ -76,14 +76,11 @@ runs on my own machine before it runs on anyone else's.
 
 <div align="center">
 
-<!-- Stats card is commented out until it is self-hosted. The public
-     github-readme-stats instance is DEPLOYMENT_PAUSED, and only a deployment
-     using my own token can set count_private=true. To enable: fork
-     anuraghazra/github-readme-stats, deploy to Vercel, set PAT_1, then
-     replace STATS_HOST below and uncomment.
-
-<img height="165" alt="stats" src="https://STATS_HOST/api?username=contactdharsan-blip&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&theme=tokyonight&title_color=64A1F4&icon_color=64A1F4&bg_color=0d1117" />
--->
+<!-- No github-readme-stats card here on purpose. The public instance is
+     DEPLOYMENT_PAUSED, and a self-hosted one would need a repo-scoped token
+     parked in a third party's environment just to render a picture. The ASCII
+     block above reports the same numbers, computed locally, from every repo
+     rather than only the public ones. -->
 
 <img alt="streak" src="https://streak-stats.demolab.com/?user=contactdharsan-blip&theme=tokyonight&hide_border=true&background=0d1117&ring=64A1F4&fire=64A1F4&currStreakLabel=64A1F4" />
 
