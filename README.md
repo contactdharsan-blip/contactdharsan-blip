@@ -31,20 +31,56 @@ dharsan@github
 Software engineer building local-first apps and developer tooling. Most of what I write
 runs on my own machine before it runs on anyone else's.
 
-<h3>▚ Currently building</h3>
+<h3>▚ Avorio</h3>
+
+The one I keep coming back to. A native flashcard app for macOS, iOS, and Android —
+FSRS-5 spaced repetition with the gamification loop that actually keeps people
+reviewing. Closed source for now.
 
 ```
-  ┌─ Avorio ──────────────────────────────────────────────────────┐
-  │  Cross-platform app. Kotlin/Compose · SwiftUI · Rust · Tauri  │
-  └───────────────────────────────────────────────────────────────┘
+                    ┌───────────────────────────────┐
+    SwiftUI ───────►│                               │
+    (macOS, iOS)    │   avorio-ffi    UniFFI        │
+                    │       │                       │
+    Compose ───────►│   avorio-core   FSRS-5, cards,│
+    (Android)       │       │         import, AI,   │
+                    │   avorio-db     plugins, auth │
+                    │       │                       │
+                    │   rusqlite  ──►  local file   │
+                    └───────────────────────────────┘
+              one Rust core, three native front ends
+```
+
+- **FSRS-5** — 19-parameter model, adaptive steps, leech detection, and an optimizer
+  that retunes weights against your own review history
+- **Offline by construction** — rusqlite on disk, PIN + biometric lock, no account,
+  no sync service to depend on
+- **Anki import** — `.apkg` / `.spkg` / `.colpkg` with media, HTML, cloze, and CSS preserved
+- **AvBrain** — generates cards from PDFs and documents. Runs on-device via Ollama on
+  Mac and Apple Intelligence on iOS, so the free tier needs no API key and no gateway
+- **WASM plugins** — `wasmi` sandbox with hook points for custom schedulers and importers
+- **One core, three front ends** — business logic lives in Rust once; SwiftUI and
+  Jetpack Compose are views over the same `AvorioDatabase` facade
+
+<h3>▚ Also building</h3>
+
+```
   ┌─ backglass ───────────────────────────────────────────────────┐
-  │  Second brain. Reads mail + files into a commitment ledger.   │
-  │  Python · SQLite · runs entirely on device.                   │
+  │  Second brain. Reads mail and files into a commitment ledger  │
+  │  with documents as evidence. Python · SQLite · on-device.     │
   └───────────────────────────────────────────────────────────────┘
   ┌─ agent-bridge ────────────────────────────────────────────────┐
-  │  Rust bridge for LLM agent workflows.                         │
+  │  Rust bridge for cross-agent LLM workflows.                   │
+  └───────────────────────────────────────────────────────────────┘
+  ┌─ cogwait ─────────────────────────────────────────────────────┐
+  │  MIT sponsor line for the Claude Code status row. Never reads │
+  │  your code, files, or prompts. Client and ad server auditable.│
   └───────────────────────────────────────────────────────────────┘
 ```
+
+[backglass](https://github.com/contactdharsan-blip/backglass) ·
+[agent-bridge](https://github.com/contactdharsan-blip/agent-bridge) ·
+[cogwait](https://github.com/Cognifer-Labs/cogwait)
 
 <h3>▚ What I actually write</h3>
 
@@ -99,15 +135,35 @@ runs on my own machine before it runs on anyone else's.
 
 <br />
 
+Repos by their canonical name. Private ones are listed without a link, because a
+link you cannot open is worse than no link.
+
 ```
-  BioPath ............. medication identification            Python
-  Dustpan ............. macOS cleanup utility                Swift
-  website-of-me ....... personal site                        TypeScript
-  social-media-pinger . cross-post scheduler                 Kotlin
-  ClaimBack ........... refund claim tracker                 TypeScript
-  cognifer-web ........ company site                         TypeScript
-  Tembo ............... ↑ earlier work                       TypeScript
+  PUBLIC
+  Dustpan ......................... macOS storage cleaner        Swift
+  website-of-me ................... résumé site                  TypeScript
+  social-media-pinger ............. cross-post scheduler         Kotlin
+  misinformation-simulation-aoa ... agent-based sim              C++
+  Misinformation-simulator- ....... earlier take on the same     Python
+  agent-bridge-profile-skill ...... cross-agent coder profile    Python
+
+  PRIVATE
+  Avorio .......................... flashcard app                Rust · Swift · Kotlin
+  BioPath ......................... compound-effect model        Python
+  ClaimBack ....................... refund claim tracker         TypeScript
+  backglass-private ............... upstream of backglass        Python
+  Cognifer-Labs/cognifer-web ...... company site                 TypeScript
+  Cognifer-Labs/alojefe ........... contractor SaaS landing      TypeScript
+  Cognifer-Labs/time-tracker ...... time tracking                TypeScript
+  Tembo ........................... earlier work                 TypeScript
 ```
+
+[Dustpan](https://github.com/contactdharsan-blip/Dustpan) ·
+[website-of-me](https://github.com/contactdharsan-blip/website-of-me) ·
+[social-media-pinger](https://github.com/contactdharsan-blip/social-media-pinger) ·
+[misinformation-simulation-aoa](https://github.com/contactdharsan-blip/misinformation-simulation-aoa) ·
+[Misinformation-simulator-](https://github.com/contactdharsan-blip/Misinformation-simulator-) ·
+[agent-bridge-profile-skill](https://github.com/contactdharsan-blip/agent-bridge-profile-skill)
 
 </details>
 
