@@ -4,8 +4,9 @@ on:
   schedule:
     - cron: "0 4 * * *"
   workflow_dispatch:
-  push:
-    branches: [main]
+  # Deliberately not triggered on push. The snake only changes when the
+  # contribution graph does, so a push trigger buys nothing and lands a bot
+  # commit on main mid-edit, forcing a rebase on every single push.
 
 jobs:
   build:
